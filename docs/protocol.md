@@ -15,6 +15,19 @@ The [dataset survey](https://github.com/darren236/singapore-asr-datasets) is the
 
 The survey records access and licence caveats. The presence of a public manifest is not proof that its audio can be mirrored. Machine-generated reference text, such as some YCSEP podcast text, should not be treated as independent human ground truth. Note if a test source may have appeared in pretraining or fine-tuning; “held out from our training run” is narrower than “unseen by the model.”
 
+## Example metric bundles
+
+A bundle answers several related questions; no single number stands in for the whole system.
+
+| Evaluation goal | Primary result | Add because it catches a different failure |
+| --- | --- | --- |
+| Compare two Singapore English ASR models on service calls | WER by call and speech condition | CER, insertion/deletion counts, local-name and particle accuracy, paired call-level uncertainty. |
+| Check a Mandarin–English code-switch model | CER plus a published mixed-unit protocol | English-span WER, annotated switch-region errors, named-entity review. |
+| Evaluate a multi-speaker meeting transcript | cpWER or tcpWER | DER for speaker-time errors and ordinary WER for lexical errors. |
+| Test a live voice assistant | Task completion by scenario | Final WER, endpoint cut-off rate, delay percentiles, and manual failure review. |
+
+For the [metrics behind these bundles](metrics.md), use the same reference and normalization rules across compared systems. The [other-task guide](other-tasks.md) defines speaker, timing, translation, and listening measures.
+
 ## Freeze an evaluation record
 
 Keep a manifest with utterance ID, source recording ID, speaker ID where available, dataset release and split, language/script, speech style, duration, environment, reference provenance, rights note, and reference text. Store prediction text under the same IDs. Keep model version, prompt, decoding parameters, endpointing, channel handling, sample-rate conversion, and run date in a separate run record. Hash the manifests. If metadata is unavailable, write “unknown” rather than inferring it from accents or filenames.

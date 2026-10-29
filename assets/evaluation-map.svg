@@ -6,32 +6,32 @@
 <circle cx="490" cy="190" r="5" fill="#2563eb"/>
 <path d="M 275 190 C 255 190, 270 75, 250 75" fill="none" stroke="#2563eb" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="250" cy="75" r="4.5" fill="#2563eb"/>
-<text x="235" y="81" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">WER and CER</text>
+<text x="235" y="81" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">WER: word accuracy</text>
 <path d="M 275 190 C 255 190, 270 135, 250 135" fill="none" stroke="#2563eb" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="250" cy="135" r="4.5" fill="#2563eb"/>
-<text x="235" y="141" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Names and particles</text>
+<text x="235" y="141" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">CER: character accuracy</text>
 <path d="M 275 190 C 255 190, 270 195, 250 195" fill="none" stroke="#2563eb" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="250" cy="195" r="4.5" fill="#2563eb"/>
-<text x="235" y="201" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Code-switch errors</text>
+<text x="235" y="201" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Entity accuracy: names</text>
 <path d="M 275 190 C 255 190, 270 255, 250 255" fill="none" stroke="#2563eb" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="250" cy="255" r="4.5" fill="#2563eb"/>
-<text x="235" y="261" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Edit counts</text>
+<text x="235" y="261" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Edit counts: diagnosis</text>
 <text x="275" y="173" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2563eb">TEXT OUTPUT</text>
 <path d="M 275 203 H 490" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
 <path d="M 510 440 C 440 440, 545 600, 490 600" fill="none" stroke="#078466" stroke-width="5" stroke-linecap="round"/>
 <circle cx="490" cy="600" r="5" fill="#078466"/>
 <path d="M 275 600 C 255 600, 270 480, 250 480" fill="none" stroke="#078466" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="250" cy="480" r="4.5" fill="#078466"/>
-<text x="235" y="486" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Diarization error</text>
+<text x="235" y="486" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">DER: speaker time</text>
 <path d="M 275 600 C 255 600, 270 540, 250 540" fill="none" stroke="#078466" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="250" cy="540" r="4.5" fill="#078466"/>
-<text x="235" y="546" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Speaker-attributed WER</text>
+<text x="235" y="546" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">cpWER: speaker words</text>
 <path d="M 275 600 C 255 600, 270 600, 250 600" fill="none" stroke="#078466" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="250" cy="600" r="4.5" fill="#078466"/>
-<text x="235" y="606" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">VAD and endpointing</text>
+<text x="235" y="606" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">VAD: misses/false alarms</text>
 <path d="M 275 600 C 255 600, 270 660, 250 660" fill="none" stroke="#078466" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="250" cy="660" r="4.5" fill="#078466"/>
-<text x="235" y="666" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Streaming latency</text>
+<text x="235" y="666" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Latency: streaming</text>
 <text x="275" y="583" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#078466">SPEAKER AND TIME</text>
 <path d="M 275 613 H 490" stroke="#078466" stroke-width="4" stroke-linecap="round"/>
 <path d="M 770 380 C 840 380, 735 190, 790 190" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round"/>
@@ -41,10 +41,10 @@
 <text x="1045" y="81" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Task completion</text>
 <path d="M 1005 190 C 1025 190, 1010 135, 1030 135" fill="none" stroke="#b45309" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="1030" cy="135" r="4.5" fill="#b45309"/>
-<text x="1045" y="141" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Translation adequacy</text>
+<text x="1045" y="141" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">BLEU / chrF / COMET</text>
 <path d="M 1005 190 C 1025 190, 1010 195, 1030 195" fill="none" stroke="#b45309" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="1030" cy="195" r="4.5" fill="#b45309"/>
-<text x="1045" y="201" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Listening tests</text>
+<text x="1045" y="201" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">MOS listening tests</text>
 <path d="M 1005 190 C 1025 190, 1010 255, 1030 255" fill="none" stroke="#b45309" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
 <circle cx="1030" cy="255" r="4.5" fill="#b45309"/>
 <text x="1045" y="261" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Intelligibility</text>

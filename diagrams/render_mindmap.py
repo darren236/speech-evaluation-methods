@@ -12,19 +12,19 @@ GROUPS = [
     {
         "side": "left", "y": 190, "color": "#2563eb",
         "label": ["TEXT OUTPUT"],
-        "leaves": ["WER and CER", "Names and particles", "Code-switch errors", "Edit counts"],
+        "leaves": ["WER: word accuracy", "CER: character accuracy", "Entity accuracy: names", "Edit counts: diagnosis"],
         "leaf_y": [75, 135, 195, 255],
     },
     {
         "side": "left", "y": 600, "color": "#078466",
         "label": ["SPEAKER AND TIME"],
-        "leaves": ["Diarization error", "Speaker-attributed WER", "VAD and endpointing", "Streaming latency"],
+        "leaves": ["DER: speaker time", "cpWER: speaker words", "VAD: misses/false alarms", "Latency: streaming"],
         "leaf_y": [480, 540, 600, 660],
     },
     {
         "side": "right", "y": 190, "color": "#b45309",
         "label": ["USER OUTCOMES"],
-        "leaves": ["Task completion", "Translation adequacy", "Listening tests", "Intelligibility"],
+        "leaves": ["Task completion", "BLEU / chrF / COMET", "MOS listening tests", "Intelligibility"],
         "leaf_y": [75, 135, 195, 255],
     },
     {
