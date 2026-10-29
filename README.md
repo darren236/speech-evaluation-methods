@@ -2,6 +2,12 @@
 
 A practical guide to evaluating speech systems, with a small, auditable ASR scorer. The starting point is the companion [Singapore and Southeast Asian ASR dataset survey](https://github.com/darren236/singapore-asr-datasets). That survey found that transcript quality, recording independence, and speech style vary substantially across public datasets. A single pooled WER can hide those differences.
 
+## Evaluation map
+
+Use this mind map to locate a measure by the output or decision you need to evaluate. The included scorer implements WER and CER; the other branches are method guides.
+
+![Mind map grouping speech evaluation into text output, speaker and timing, user outcomes, and study design](assets/evaluation-map.svg)
+
 ## Start here
 
 | Question | Read | Measure |
