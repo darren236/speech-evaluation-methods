@@ -141,7 +141,7 @@ def main():
         'viewBox="0 0 1600 1250" role="img" aria-labelledby="title desc">',
         '<title id="title">Speech evaluation metric mind map</title>',
         '<desc id="desc">Six branches cover transcript accuracy, speakers, detection and speed, '
-        'translation, audio quality, and task outcomes. A footer lists evaluation rules.</desc>',
+        'translation, audio quality, and task outcomes. A footer shows an evaluation checklist.</desc>',
         rect(0, 0, 1600, 1250, "#f7f9fd", 0),
         f'<circle cx="805" cy="610" r="445" fill="#eef3fa"/>',
         text(800, 67, "Speech evaluation, by task", 42, INK, 750, "middle"),
@@ -172,7 +172,7 @@ def main():
         text(800, 658, "Primary metric + failure check", 19, "#ffffff", 400, "middle"),
         text(800, 694, "Same data · same scoring rules", 19, "#ffffff", 400, "middle"),
         rect(70, 1120, 1460, 100, "#eaf0f8", 22),
-        text(105, 1159, "STUDY RULES", 20, INK, 750),
+        text(105, 1159, "CHECKLIST", 20, INK, 750),
     ])
     rules = [
         ("01", "Match the data"),

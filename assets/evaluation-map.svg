@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1250" viewBox="0 0 1600 1250" role="img" aria-labelledby="title desc">
 <title id="title">Speech evaluation metric mind map</title>
-<desc id="desc">Six branches cover transcript accuracy, speakers, detection and speed, translation, audio quality, and task outcomes. A footer lists evaluation rules.</desc>
+<desc id="desc">Six branches cover transcript accuracy, speakers, detection and speed, translation, audio quality, and task outcomes. A footer shows an evaluation checklist.</desc>
 <rect x="0" y="0" width="1600" height="1250" rx="0" fill="#f7f9fd" stroke="none" stroke-width="1"/>
 <circle cx="805" cy="610" r="445" fill="#eef3fa"/>
 <text x="800" y="67" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="42" font-weight="750" fill="#18304d">Speech evaluation, by task</text>
@@ -137,7 +137,7 @@
 <text x="800" y="658" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#ffffff">Primary metric + failure check</text>
 <text x="800" y="694" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#ffffff">Same data · same scoring rules</text>
 <rect x="70" y="1120" width="1460" height="100" rx="22" fill="#eaf0f8" stroke="none" stroke-width="1"/>
-<text x="105" y="1159" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="750" fill="#18304d">STUDY RULES</text>
+<text x="105" y="1159" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="750" fill="#18304d">CHECKLIST</text>
 <circle cx="300" cy="1170" r="25" fill="#18304d"/>
 <text x="300" y="1177" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">01</text>
 <text x="338" y="1177" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#18304d">Match the data</text>

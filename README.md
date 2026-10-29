@@ -5,7 +5,7 @@ This guide builds on the [Singapore and Southeast Asian automatic speech recogni
 
 ## Map
 
-Six branches group metrics by task. The footer shows the rules that make scores comparable.
+Six branches group metrics by task. The footer gives a short evaluation checklist.
 The included scorer computes word and character error rates.
 
 ![Speech evaluation map with transcript, speaker, detection and speed, translation, audio quality, and task outcome branches](assets/evaluation-map.svg)
@@ -169,11 +169,3 @@ Definitions draw on [JiWER](https://github.com/jitsi/jiwer),
 [SacreBLEU](https://github.com/mjpost/sacreBLEU), and
 [ITU-T P.800](https://www.itu.int/rec/T-REC-P.800-199608-I/en).
 The guides link to sources for specific methods.
-
-## Contribute
-
-```bash
-PYTHONPATH=src python3 -m unittest discover -s tests -v
-```
-
-For a new metric, include its definition, text or annotation policy, worked example, and tests.
