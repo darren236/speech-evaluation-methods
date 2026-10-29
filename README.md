@@ -1,31 +1,32 @@
 # Speech evaluation methods
 
 Choose speech metrics by the output you need to judge.
-This guide builds on the [Singapore and Southeast Asian ASR dataset survey](https://github.com/darren236/singapore-asr-datasets).
+This guide builds on the [Singapore and Southeast Asian automatic speech recognition (ASR) dataset survey](https://github.com/darren236/singapore-asr-datasets).
 
 ## Map
 
-The map groups metrics by task. The included scorer computes **WER and CER**.
+The map groups metrics by task. The included scorer computes word and character error rates.
 
 ![Mind map grouping speech evaluation into text output, speaker and timing, user outcomes, and study design](assets/evaluation-map.svg)
 
 ## Choose metrics
 
 Use a primary metric for the task, then add measures for failures that matter to users.
+A *reference* is the expected transcript or label; a *prediction* is the system output.
 “Standard” and “common” describe use **within that task**.
 
 | Task | Start with | Add when needed |
 | --- | --- | --- |
-| English ASR | **WER** · standard | Edit counts; entity recall for names and amounts. |
-| Mandarin ASR | **CER** · common | WER with a declared word segmenter. |
-| Mixed-script ASR | CER + mixed-unit error rate | English-span WER; errors near language switches. |
-| Speaker diarization | **DER** · standard | Miss, false-alarm, and speaker-confusion time. |
-| Multi-speaker transcript | **cpWER** · common | tcpWER for timing; DER for speaker turns. |
-| Speech detection | Miss + false-alarm rates | Endpoint delay and cut-off rate. |
-| Live voice system | Task success | Final WER, cut-offs, and latency percentiles. |
-| Offline processing | WER or CER + **RTF** | Quality and throughput by recording type. |
-| Speech translation | BLEU or chrF | Human adequacy; COMET with a pinned model. |
-| Speech synthesis or enhancement | **MOS** listening test | Intelligibility; PESQ only for its supported use. |
+| English ASR | **Word error rate (WER):** word errors per reference word; standard. | Counts of missed, added, and changed words; check important names. |
+| Mandarin ASR | **Character error rate (CER):** character errors per reference character; common. | WER if you state how the text is split into words. |
+| Mixed-script ASR | CER + **mixed-unit error rate:** count Han characters and English words. | English WER; review language changes. |
+| Speaker diarization (who spoke when) | **Diarization error rate (DER):** wrong speaker time; standard. | Break out missed, false, and wrong-speaker time. |
+| Multi-speaker transcript | **cpWER:** speaker-assigned word errors; common. | **tcpWER:** also checks timing; DER checks speaker turns. |
+| Speech detection | Missed speech + **false alarms** (silence marked as speech). | **Endpoint delay:** time after speech ends; count early cut-offs. |
+| Live voice system | **Task success:** share of user goals completed. | Final WER, early cut-offs, and time to first and final response. |
+| Offline processing | WER or CER + **real-time factor (RTF):** processing time ÷ audio duration. | Compare accuracy and speed by recording type. |
+| Speech translation | **BLEU:** word overlap; **chrF:** character overlap. | Human meaning check; **COMET:** model-based quality. |
+| Generated or cleaned-up speech | **Mean opinion score (MOS):** average listener rating. | Intelligibility (understanding); **PESQ:** telephone audio quality. |
 
 ## Transcript accuracy
 
