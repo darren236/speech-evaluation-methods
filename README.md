@@ -1,67 +1,91 @@
 # Speech evaluation methods
 
-A practical guide to choosing speech metrics, with a small, auditable ASR scorer. It builds on the companion [Singapore and Southeast Asian ASR dataset survey](https://github.com/darren236/singapore-asr-datasets). Start with the **output you need to judge**: transcript text, speaker turns, timing, translation, generated speech, or the success of a voice task. Then choose a metric and a matching test set.
+A guide to choosing speech metrics, plus a small ASR scorer.
+It builds on the [Singapore and Southeast Asian ASR dataset survey](https://github.com/darren236/singapore-asr-datasets).
 
-## Evaluation map
+Start with what you need to judge: words, speakers, timing, translation, audio quality, or task success.
+Then choose a metric and a matching test set.
 
-Use this mind map to locate a measure by the output or decision you need to evaluate. The included scorer implements **WER and CER**; the other branches are method guides.
+## Map
+
+The map groups metrics by use. The included scorer implements **WER and CER**.
 
 ![Mind map grouping speech evaluation into text output, speaker and timing, user outcomes, and study design](assets/evaluation-map.svg)
 
-## Which metric should I use?
+## Metric picks
 
-“Default” below means a familiar starting measure **within that task**, not a popularity ranking across all speech research. Lower is better for error rates and latency; higher is better for recall, quality judgments, and task success.
+“Standard” means a common starting point **for that task**. It is not a ranking across tasks.
+Lower is better for errors and latency. Higher is better for accuracy and quality.
 
-| What are you judging? | Start with | How established? | Add when this matters | Main blind spot |
-| --- | --- | --- | --- | --- |
-| English ASR transcript | **WER** (word error rate) | Default ASR baseline | CER, edit counts, names/particle accuracy | A correct meaning can still have word errors; normalization changes the score. |
-| Mandarin or mixed-script ASR | **CER** (character error rate), plus a declared token rule | Common multilingual companion | WER on suitable spans; switch and entity review | Characters and English words receive different effective weight. |
-| Speaker diarization | **DER** (diarization error rate) | Default diarization baseline | Miss, false alarm, confusion breakdown | It does not say whether the words are correct. |
-| Multi-speaker transcript | **cpWER** or **tcpWER** | Common meeting-transcription measures | DER and ordinary WER | Scores depend on speaker and timing rules. |
-| Speech detection and endpointing | Miss/false-alarm rates and end-of-turn delay | Common task measures | Boundary review and latency percentiles | Detecting speech is different from transcribing it. |
-| Streaming ASR or voice assistant | Final WER **and** latency/task success | Common product bundle, not one universal metric | Time to first/stable text, interruptions | Fast output may be wrong or unstable. |
-| Offline ASR processing speed | **RTF** (real-time factor) | Common throughput measure | Hardware, batch size, end-to-end latency | Fast bulk processing need not feel fast to a live user. |
-| Speech translation | Human adequacy plus **BLEU/chrF** or **COMET** | Common translation measures | Names, omissions, latency | A single reference cannot list every valid translation. |
-| Generated or enhanced speech | Controlled listening test, often **MOS** | Established subjective method | Intelligibility and latency | Listener setup and question wording affect results. |
+| Task | Starting metric | What it tells you |
+| --- | --- | --- |
+| English ASR | **WER** · standard | Word errors in a transcript. |
+| Mandarin or mixed-script ASR | **CER** · common companion | Character errors; add switch and name checks. |
+| Speaker diarization | **DER** · standard | Missed speech, false alarms, and speaker mix-ups. |
+| Multi-speaker transcript | **cpWER / tcpWER** · common | Word errors with speaker assignment; tcpWER also checks timing. |
+| Speech detection | Miss and false-alarm rates · common | Speech missed or silence treated as speech. |
+| Live voice system | WER + latency + task success | Accuracy, speed, and whether the task worked. |
+| Offline processing | **RTF** · common | Processing time per second of audio. |
+| Speech translation | **BLEU / chrF / COMET** + human review | Translation agreement and adequacy. |
+| Speech synthesis or enhancement | Listening test, often **MOS** | Listener-rated quality under a stated question. |
 
-See the [ASR metric guide](docs/metrics.md) for definitions and worked examples, [other speech tasks](docs/other-tasks.md) for speaker, timing, translation, and audio-quality measures, and the [evaluation protocol](docs/protocol.md) for choosing data and reporting a comparison. For a voice product, report **task success alongside the technical measure** that explains failures.
+Read the [ASR metrics](docs/metrics.md), [other speech tasks](docs/other-tasks.md),
+and [evaluation protocol](docs/protocol.md) for definitions, limits, and examples.
 
-## One example: why the metric policy matters
+## Example
 
-Reference: `okay lah` · prediction: `okay`. WER is **1 deletion / 2 reference words = 50%**. A normalizer that deletes `lah` makes the same prediction score **0%**. Both numbers may be internally consistent; the right policy depends on whether the product must retain local particles. The [ASR guide](docs/metrics.md) shows the formula and other edge cases.
+Reference: `okay lah` · prediction: `okay`.
 
-## Score a paired ASR manifest
+- Count `lah`: **1 error / 2 words = 50% WER**.
+- Remove `lah` during normalization: **0% WER**.
 
-Python 3.10+; the scorer has no runtime dependencies. Run it directly from the repo:
+Choose one policy that matches the product. Use it for every model.
+
+## Run the scorer
+
+Requires Python 3.10+ and no runtime packages.
 
 ```bash
 PYTHONPATH=src python3 -m speech_eval.cli examples/references.jsonl examples/hypotheses.jsonl --output report.json
 ```
 
-If `pip` is available, `pip install -e .` also installs the `speech-eval` command.
+- Reference JSONL: `id`, `reference`, and optional `group`.
+- Prediction JSONL: matching `id` values and `hypothesis`.
+- Missing, extra, or duplicate IDs stop scoring.
 
-Each reference line has `id`, `reference`, and optional `group`; each prediction line has the same `id` and `hypothesis`. IDs must match exactly. The scorer fails on missing, extra, or duplicate IDs. It reports corpus-level micro WER and CER as fractions (`0.20` means 20%), plus descriptive group breakdowns. `--normalization strict` scores the original text; the default `basic` policy applies Unicode NFKC, case folding, punctuation removal, and whitespace normalization. Neither policy deletes fillers or local particles such as `lah`, `ah`, or `liao`. Save the normalization policy alongside every score.
+The report gives corpus WER and CER, plus scores by group.
+Rates are fractions: `0.20` means 20%.
 
-The executable scores **WER and CER only**. It does not score diarization, mixed-unit error rate, translation, human quality, or uncertainty. Those need task-specific alignment and annotation rules. See the guides before comparing model rankings.
+The default `basic` policy folds case and Unicode form, removes punctuation, and normalizes spaces.
+Use `--normalization strict` to keep the original text. Save the policy with each score.
 
-## Evaluation checklist
+The scorer covers **WER and CER only**. Other metrics in this guide are explained, not computed.
+If `pip` is available, `pip install -e .` also adds the `speech-eval` command.
 
-1. Define the product task and the target population before selecting recordings.
-2. Record dataset version, split, rights, reference provenance, speaker/recording IDs, and possible training overlap.
-3. Freeze reference and prediction manifests, system version, decoding settings, normalization, and tokenization.
-4. Check every prediction ID; never silently omit failed or missing outputs.
-5. Report edit counts and corpus micro rates by dataset and speech condition. Keep pooled scores secondary.
-6. Review errors on names, Singlish particles, switches, disfluencies, noise, and speaker turns.
-7. For model comparisons, use paired recordings and resample by independent speaker or source recording where possible.
+## Checklist
 
-## Scope and references
+1. Match the test set to the speech your product will hear.
+2. Record its version, references, rights, speakers, and possible training overlap.
+3. Freeze model settings, manifests, normalization, and tokenization.
+4. Score every ID. Report counts and rates by dataset and condition.
+5. Review local names, particles, switches, noise, and speaker turns.
+6. Compare systems on paired recordings; account for shared speakers and calls.
 
-The code scores reference text against ASR hypotheses; it does not download or redistribute source-dataset audio or transcripts. Dataset examples and rights are documented in the [survey](https://github.com/darren236/singapore-asr-datasets). The descriptions of [ASR metrics](https://github.com/jitsi/jiwer), [diarization and meeting metrics](https://github.com/fgnt/meeteval), [translation metrics](https://github.com/mjpost/sacreBLEU), and [subjective speech quality](https://www.itu.int/rec/T-REC-P.800-199608-I/en) are grounded in their respective source projects or standards. See each guide for specific references and scoring conditions.
+## Sources
 
-## Development
+The scorer uses synthetic examples. It does not download or redistribute source-dataset material.
+Dataset rights and reference quality are in the [survey](https://github.com/darren236/singapore-asr-datasets).
+
+Definitions draw on [JiWER](https://github.com/jitsi/jiwer),
+[MeetEval](https://github.com/fgnt/meeteval),
+[SacreBLEU](https://github.com/mjpost/sacreBLEU), and
+[ITU-T P.800](https://www.itu.int/rec/T-REC-P.800-199608-I/en).
+The guides link to sources for specific methods.
+
+## Contribute
 
 ```bash
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-Contributions should include the metric definition, annotation and normalization policy, a worked example, and tests for any new executable metric.
+For a new metric, include its definition, text or annotation policy, worked example, and tests.

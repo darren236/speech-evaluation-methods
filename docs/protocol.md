@@ -1,45 +1,70 @@
-# Evaluation protocol for Singapore and regional ASR
+# Evaluation protocol
 
-The [dataset survey](https://github.com/darren236/singapore-asr-datasets) is the evidence inventory. Choose data for the speech the system will encounter, then document a protocol before running models.
+Choose data that matches the speech your system will hear.
+Use the [Singapore ASR dataset survey](https://github.com/darren236/singapore-asr-datasets) to check access, references, and source overlap.
 
-## Select complementary tests
+## Pick data
 
-| Target behavior | Candidate data | Interpretation |
+| Target speech | Candidate | Key limit |
 | --- | --- | --- |
-| Service conversations | AppTek en-SG | Manual references, but ten speakers and role-played calls. |
-| Spontaneous Singlish | MNSC Part 3 or SASRBench | Both derive from NSC Part 3; do not treat them as independent validations. |
-| Singapore names and places | MNSC Part 2; SG Streets for street names | Prompted reading differs from spontaneous use. |
-| Code-switched conversation | MNSC Part 4 | Define the scoring of mixed scripts and language switches. |
-| Accented web video | GigaSpeechBench SGP-EN | Verify audio-use rights before use. |
-| Scripted accent coverage | Common Voice Singapore accent | Speaker balance and release-specific test counts matter. |
+| Service calls | AppTek en-SG | Manual text; ten speakers in role-played calls. |
+| Spontaneous Singlish | MNSC Part 3 or SASRBench | Both come from NSC Part 3. |
+| Local names and places | MNSC Part 2; SG Streets | Prompted reading differs from conversation. |
+| Code switching | MNSC Part 4 | Mixed scripts need a scoring rule. |
+| Accented web video | GigaSpeechBench SGP-EN | Check audio-use rights. |
+| Scripted accent coverage | Common Voice Singapore accent | Check speaker balance and release counts. |
 
-The survey records access and licence caveats. The presence of a public manifest is not proof that its audio can be mirrored. Machine-generated reference text, such as some YCSEP podcast text, should not be treated as independent human ground truth. Note if a test source may have appeared in pretraining or fine-tuning; “held out from our training run” is narrower than “unseen by the model.”
+Do not count derived sets as independent evidence.
+A public manifest does not settle audio rights.
 
-## Example metric bundles
+Machine transcripts, including some YCSEP text, are not independent human references.
+Record possible pretraining overlap; “held out from our run” does not mean “unseen by the model.”
 
-A bundle answers several related questions; no single number stands in for the whole system.
+## Metric bundles
 
-| Evaluation goal | Primary result | Add because it catches a different failure |
+Use several measures when one score would hide a critical failure.
+
+| Goal | Lead measure | Add |
 | --- | --- | --- |
-| Compare two Singapore English ASR models on service calls | WER by call and speech condition | CER, insertion/deletion counts, local-name and particle accuracy, paired call-level uncertainty. |
-| Check a Mandarin–English code-switch model | CER plus a published mixed-unit protocol | English-span WER, annotated switch-region errors, named-entity review. |
-| Evaluate a multi-speaker meeting transcript | cpWER or tcpWER | DER for speaker-time errors and ordinary WER for lexical errors. |
-| Test a live voice assistant | Task completion by scenario | Final WER, endpoint cut-off rate, delay percentiles, and manual failure review. |
+| Singapore English ASR | WER by source and speech style | CER; name and particle accuracy. |
+| Mandarin–English switching | CER or declared mixed-unit rate | English-span WER; switch-region review. |
+| Meeting transcript | cpWER or tcpWER | DER; ordinary WER. |
+| Live voice assistant | Task completion | Final WER; cut-offs; delay percentiles. |
 
-For the [metrics behind these bundles](metrics.md), use the same reference and normalization rules across compared systems. The [other-task guide](other-tasks.md) defines speaker, timing, translation, and listening measures.
+See [ASR metrics](metrics.md) and [other speech tasks](other-tasks.md) for definitions.
 
-## Freeze an evaluation record
+## Freeze the setup
 
-Keep a manifest with utterance ID, source recording ID, speaker ID where available, dataset release and split, language/script, speech style, duration, environment, reference provenance, rights note, and reference text. Store prediction text under the same IDs. Keep model version, prompt, decoding parameters, endpointing, channel handling, sample-rate conversion, and run date in a separate run record. Hash the manifests. If metadata is unavailable, write “unknown” rather than inferring it from accents or filenames.
+Keep two records:
 
-Decide whether scoring is utterance based, channel based, or whole recording based. Paired call channels and overlapping snippets are not independent examples. State how overlap, crosstalk, disfluencies, partial words, bracketed particles, non-speech events, and unintelligible spans are treated. Set rules before seeing system results.
+- **Data manifest:** clip and source-recording IDs, speaker ID if known, dataset version and split,
+  language, duration, reference source, rights note, and reference text.
+- **Run record:** model version, prompt, decoding settings, endpointing, channel handling,
+  sample-rate conversion, run date, and prediction text by ID.
 
-## Compare systems fairly
+Hash both manifests. Mark unavailable fields as `unknown`; do not infer them from an accent.
+Decide the scoring unit: utterance, channel, or whole recording.
 
-Score the *same recordings* with the *same references and normalizer*. Include all IDs, including failed inference. Report S/D/I and denominator as well as WER and CER for each dataset and condition. Report the number of speakers and source recordings, not just clips. Avoid declaring a winner from a pooled score if it masks a serious regression on local names or code switching.
+Set rules for overlap, crosstalk, disfluencies, partial words, particles, and non-speech text.
+Freeze normalization and tokenization before looking at model results.
 
-For uncertainty, resample paired systems together at the level of an independent source recording or speaker. If utterances share a call or speaker, utterance-level bootstrap samples understate dependence. State the resampling unit, number of draws, seed, and confidence interval method. [Blockwise bootstrap research](https://arxiv.org/abs/1912.09508) and [work on dependent utterances](https://arxiv.org/abs/2209.05281) explain this concern. For small strata, show raw per-recording results and avoid overstating significance.
+## Compare models
 
-## Release a scorecard
+Score the **same recordings** against the **same references** with the **same policy**.
+Record failed and missing predictions. State how they affect the score; never drop IDs silently.
 
-Publish a scorecard with dataset/release, evaluation unit, reference quality, source-family overlap, number of clips/recordings/speakers, normalization, tokenization, model settings, S/D/I/N, WER/CER, uncertainty, failure count, rights limitations, and a concise error review. Do not publish restricted source material or private recordings in the scorecard.
+Report S, D, I, N, WER, and CER by source and condition.
+Also report clips, speakers, and independent source recordings.
+
+Compare paired systems by resampling whole speakers or source recordings when possible.
+Clip-level resampling can understate uncertainty when clips share a call or speaker.
+State the resampling unit, draws, seed, and confidence interval method.
+See [blockwise bootstrap work](https://arxiv.org/abs/1912.09508) and
+[research on dependent utterances](https://arxiv.org/abs/2209.05281).
+
+## Publish a scorecard
+
+Include the dataset and split, reference quality, source overlap, model settings,
+normalizer, token rule, counts, rates, uncertainty, failed runs, and a short error review.
+Show per-condition results before a pooled number.
+Do not publish restricted recordings or transcripts.
