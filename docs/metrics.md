@@ -13,6 +13,7 @@
 
 The CLI implements **WER and CER only**.
 [JiWER](https://github.com/jitsi/jiwer/blob/master/src/jiwer/process.py) defines the related match and information measures.
+See [worked examples](examples.md#transcript-text) for every metric in the table.
 
 ## Edit rates
 
@@ -26,10 +27,10 @@ This scorer splits words on whitespace.
 Its CER removes whitespace and counts Unicode code points, not grapheme clusters.
 Report S, D, I, and N with the rate.
 
-**Example:** reference `meet at Bedok`; prediction `meet Bedok now`.
+**Example:** reference `meet at Bedok`; prediction `meet Bedok`.
 
-The scorer deletes `at` and inserts `now`.
-S = 0, D = 1, I = 1, N = 3, so WER = **2/3 = 66.7%**.
+The scorer deletes `at`.
+S = 0, D = 1, I = 0, N = 3, so WER = **1/3 = 33.3%**.
 
 The scorer adds counts across utterances, then divides. This is a corpus micro average.
 A mean of utterance rates gives short clips more weight.

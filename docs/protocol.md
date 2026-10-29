@@ -32,6 +32,7 @@ Use several measures when one score would hide a critical failure.
 | Live voice assistant | Task completion | Final WER; cut-offs; delay percentiles. |
 
 See [ASR metrics](metrics.md) and [other speech tasks](other-tasks.md) for definitions.
+Use the [metric examples](examples.md) to check how each score answers a different question.
 
 ## Freeze the setup
 

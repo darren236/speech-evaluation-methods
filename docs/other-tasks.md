@@ -2,6 +2,7 @@
 
 Choose a metric for the output you need to judge.
 The repo's CLI scores **WER and CER only**; the methods below need other tools or labels.
+See [worked examples](examples.md#speakers-and-timing) for each measure.
 
 ## Speakers
 

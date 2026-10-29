@@ -12,25 +12,27 @@ The map groups metrics by use. The included scorer implements **WER and CER**.
 
 ![Mind map grouping speech evaluation into text output, speaker and timing, user outcomes, and study design](assets/evaluation-map.svg)
 
-## Metric picks
+## Recommended metrics
 
-“Standard” means a common starting point **for that task**. It is not a ranking across tasks.
+“Standard” and “common” describe use **within that task**, not a ranking across tasks.
 Lower is better for errors and latency. Higher is better for accuracy and quality.
 
-| Task | Starting metric | What it tells you |
+| Category | Recommended set | Why this set |
 | --- | --- | --- |
-| English ASR | **WER** · standard | Word errors in a transcript. |
-| Mandarin or mixed-script ASR | **CER** · common companion | Character errors; add switch and name checks. |
-| Speaker diarization | **DER** · standard | Missed speech, false alarms, and speaker mix-ups. |
-| Multi-speaker transcript | **cpWER / tcpWER** · common | Word errors with speaker assignment; tcpWER also checks timing. |
-| Speech detection | Miss and false-alarm rates · common | Speech missed or silence treated as speech. |
-| Live voice system | WER + latency + task success | Accuracy, speed, and whether the task worked. |
-| Offline processing | **RTF** · common | Processing time per second of audio. |
-| Speech translation | **BLEU / chrF / COMET** + human review | Translation agreement and adequacy. |
-| Speech synthesis or enhancement | Listening test, often **MOS** | Listener-rated quality under a stated question. |
+| English ASR | **WER** (standard) + edit counts; add entity recall | Overall words plus critical names. |
+| Mandarin ASR | **CER** (common) + declared word segmentation if using WER | Avoids hidden tokenization effects. |
+| Mixed-script ASR | CER + declared mixed-unit rate + switch review | Shows errors across scripts. |
+| Speaker diarization | **DER** (standard) + error breakdown | Shows both the total and its causes. |
+| Multi-speaker transcript | **cpWER** (common) or **tcpWER** + DER | Checks words, speakers, and timing. |
+| Speech detection | Miss/false-alarm rates (common) + endpoint delay | Catches lost speech and slow endings. |
+| Live voice system | Final WER + latency + task success | Balances accuracy, speed, and outcome. |
+| Offline processing | **RTF** (common) + WER/CER | Balances throughput and accuracy. |
+| Speech translation | BLEU or chrF + human adequacy; COMET when supported | Checks overlap and meaning. |
+| Speech synthesis or enhancement | MOS listening test + intelligibility | Checks perceived quality and clarity. |
 
 Read the [ASR metrics](docs/metrics.md), [other speech tasks](docs/other-tasks.md),
-and [evaluation protocol](docs/protocol.md) for definitions, limits, and examples.
+and [evaluation protocol](docs/protocol.md) for definitions and limits.
+See [examples for every metric](docs/examples.md) for small worked cases.
 
 ## Example
 
