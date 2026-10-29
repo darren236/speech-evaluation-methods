@@ -77,11 +77,11 @@ GROUPS = [
         "x": 1070,
         "y": 475,
         "rows": [
-            ("Human A/B", "Blind listener preference"),
-            ("MOS", "Rated naturalness / tone"),
-            ("Intelligibility", "Words listeners recover"),
-            ("Voice match", "Speaker identity in TTS"),
-            ("PESQ", "Telephone / codec quality"),
+            ("Human quality", "Preference · MOS · tone"),
+            ("Human checks", "Words · voice identity"),
+            ("Calculated", "ASR errors · similarity"),
+            ("Service", "First audio · failures"),
+            ("PESQ", "Telephone / codec only"),
         ],
     },
     {

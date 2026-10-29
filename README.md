@@ -27,8 +27,17 @@ A *reference* is the expected transcript or label; a *prediction* is the system 
 | Live voice system | **Task success:** share of user goals completed. | Final WER, early cut-offs, and time to first and final response. |
 | Offline processing | WER or CER + **real-time factor (RTF):** processing time ÷ audio duration. | Compare accuracy and speed by recording type. |
 | Speech translation | **BLEU:** word overlap; **chrF:** character overlap. | Human meaning check; **COMET:** model-based quality. |
-| Text-to-speech (TTS) | Blind listener preference or **mean opinion score (MOS):** average listener rating of a named quality. | Pronunciation, intelligibility (words understood), voice match, and time to first audio. |
+| Text-to-speech (TTS) | **Human:** blind listener preference or **mean opinion score (MOS):** average rating of a named quality. | **Calculated:** speech-to-text errors; **operational:** time to first audio. Review tone, pronunciation, and voice match. |
 | Cleaned-up speech | Listener rating of quality and intelligibility. | **PESQ:** telephone/codec quality when its test conditions fit. |
+
+### Evidence types
+
+| Type | What is needed | Examples |
+| --- | --- | --- |
+| **Human judgment** | People listen or review outputs against a rubric. | TTS preference and MOS; translation meaning checks. |
+| **Calculated score** | Recordings, predictions, and fixed reference labels or audio. People may need to create the references. | WER, CER, DER, BLEU, PESQ. |
+| **Model-assisted check** | A pinned evaluation model; inspect its mistakes. | COMET; TTS speech-to-text errors and speaker similarity. |
+| **Service or outcome measure** | Timing logs or defined success labels. Some outcomes need human review. | First-audio delay, RTF, task success. |
 
 ### Four questions
 
@@ -106,19 +115,22 @@ COMET scores need a model version and cannot be calculated from this text exampl
 
 ## Text-to-speech (TTS)
 
-Start with **human listening** for naturalness and overall preference.
-Automatic scores help find specific faults; they cannot establish that a voice sounds right.
+Use **human ratings** for how speech sounds, **calculated checks** for specific errors,
+and **service measures** for speed and reliability.
+The calculated checks need generated audio and references; some references require human labeling.
+
+### Human listening
+
+People must hear the clips and make these judgments.
 Use the same prompts and playback conditions for each system.
 
 | Metric | Use | Small example |
 | --- | --- | --- |
 | Blind A/B preference | Which of two hidden systems sounds better for the same text? | 18 of 30 listeners choose A for a prompt set: **60% prefer A**. |
 | **MOS** · mean opinion score | Rate one named quality, such as naturalness, on a fixed scale. | Naturalness ratings 4, 4, 3, 5, 4 on a 1–5 scale give **4.0/5**. |
-| Pronunciation accuracy | Check names, numbers, abbreviations, and words that change with context. | 8 of 10 marked terms are read acceptably: **80% correct**. |
-| Intelligibility | Can listeners recover the intended words? | 90 of 100 target words repeated correctly = **90%**. |
-| Speech-to-text WER/CER | Transcribe generated audio automatically; compare with the input text for word or character errors. | Prompt `turn left`, recognizer hears `turn`: **50% WER**. Check the recognizer's own mistakes. |
-| Voice match | For voice cloning, does speech sound like the authorized reference speaker? | Reviewers judge 16 of 20 clips as matching: **80%** under that rubric. |
-| Time to first audio | For live TTS, how soon can playback begin? | Request at 0.0 s; first playable audio at 0.4 s: **0.4 s**. |
+| Pronunciation rating | Listen for names, numbers, abbreviations, and context-dependent words. | Reviewers accept 8 of 10 marked terms: **80% correct**. |
+| Word intelligibility | Ask listeners to repeat what they heard. | They repeat 90 of 100 target words correctly: **90%**. |
+| Voice match rating | For voice cloning, compare with an authorized reference speaker. | Reviewers judge 16 of 20 clips as matching: **80%** under that rubric. |
 
 ### What listeners check
 
@@ -134,13 +146,33 @@ a transcript-based score may miss awkward stress or an unsuitable tone.
 Blind model names, randomize clip order, use listeners familiar with the language or accent,
 and report the exact question, scale, prompt set, listener count, playback setup, and uncertainty.
 
+### Calculated checks
+
+These can be computed with a scorer or model after the audio and reference are available.
+Speech-to-text and speaker-similarity checks depend on an evaluation model.
+They flag likely problems; inspect samples before treating a score as proof of listener quality.
+
+| Metric | Use | Small example |
+| --- | --- | --- |
+| Speech-to-text WER/CER | Transcribe generated audio with a recognizer; compare with the input words or characters. | Prompt `turn left`, recognizer hears `turn`: **50% WER**. The recognizer can also be wrong. |
+| Speaker similarity | For cloning, compare generated and reference voices with the same speaker-embedding model. | Clip A scores **0.82**, B **0.70** against one reference; higher is closer *under that model*. |
+
+### Service measures
+
+These come from request logs and timed generation runs. They matter for live products.
+
+| Measure | Use | Small example |
+| --- | --- | --- |
+| Time to first audio | Delay before playback can begin. | Request at 0.0 s; first playable audio at 0.4 s: **0.4 s**. |
+| Generation failure rate | Empty, failed, or unusable outputs. | 3 failures in 100 requests = **3%**. |
+
 ### Leaderboards
 
-| Board | What it tells you | Check before using a rank |
+| Board | Evidence | Check before using a rank |
 | --- | --- | --- |
-| [TTS Arena](https://huggingface.co/spaces/TTS-AGI/TTS-Arena-V2) | Blind human preference for how speech sounds. | Check language coverage, vote counts, and rating uncertainty. |
-| [Artificial Analysis Speech Arena](https://artificialanalysis.ai/text-to-speech/leaderboard) | Blind pairwise preference, with provider voices or matched cloned voices; also offers pronunciation checks. | Choose the right voice, language, and category view; inspect vote counts and uncertainty. |
-| [Hugging Face Open TTS](https://huggingface.co/spaces/hf-audio/open_tts_leaderboard) | Open-model diagnostics: speech-to-text error, voice similarity, and generation speed. | These scores do not directly measure naturalness, tone, or listener preference. |
+| [TTS Arena](https://huggingface.co/spaces/TTS-AGI/TTS-Arena-V2) | **Human:** blind listening preference. | Language coverage, vote counts, and rating uncertainty. |
+| [Artificial Analysis Speech Arena](https://artificialanalysis.ai/text-to-speech/leaderboard) | **Human:** blind preference and pronunciation judgments; speed is measured separately. | Voice, language, category, vote counts, and uncertainty. |
+| [Hugging Face Open TTS](https://huggingface.co/spaces/hf-audio/open_tts_leaderboard) | **Calculated:** speech-to-text error, speaker similarity, and speed. | These do not directly measure naturalness, tone, or listener preference. |
 
 Use rankings to shortlist systems, then listen to **your own prompts** with the target audience.
 Keep preference, pronunciation, voice match, and speed as separate results; one rank cannot cover all four.
@@ -148,7 +180,8 @@ Keep preference, pronunciation, voice match, and speed as separate results; one 
 ## Audio enhancement
 
 Cleaned-up speech needs a different listening question from TTS.
-Rate listening quality and whether words remain understandable.
+**Human:** rate listening quality and whether words remain understandable.
+**Calculated:** use PESQ only when its telephone/codec conditions fit.
 
 | Metric | Use | Small example |
 | --- | --- | --- |

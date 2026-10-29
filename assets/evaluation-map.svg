@@ -99,20 +99,20 @@
 <text x="1114" y="524" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#db2777">SYNTHESIS &amp; AUDIO</text>
 <text x="1114" y="548" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#52647b">How does generated speech sound?</text>
 <circle cx="1115" cy="585" r="4" fill="#db2777"/>
-<text x="1131" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Human A/B</text>
-<text x="1283" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Blind listener preference</text>
+<text x="1131" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Human quality</text>
+<text x="1283" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Preference · MOS · tone</text>
 <circle cx="1115" cy="617" r="4" fill="#db2777"/>
-<text x="1131" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">MOS</text>
-<text x="1283" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Rated naturalness / tone</text>
+<text x="1131" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Human checks</text>
+<text x="1283" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Words · voice identity</text>
 <circle cx="1115" cy="649" r="4" fill="#db2777"/>
-<text x="1131" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Intelligibility</text>
-<text x="1283" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Words listeners recover</text>
+<text x="1131" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Calculated</text>
+<text x="1283" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">ASR errors · similarity</text>
 <circle cx="1115" cy="681" r="4" fill="#db2777"/>
-<text x="1131" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Voice match</text>
-<text x="1283" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Speaker identity in TTS</text>
+<text x="1131" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Service</text>
+<text x="1283" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">First audio · failures</text>
 <circle cx="1115" cy="713" r="4" fill="#db2777"/>
 <text x="1131" y="718" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">PESQ</text>
-<text x="1283" y="718" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Telephone / codec quality</text>
+<text x="1283" y="718" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Telephone / codec only</text>
 <rect x="1070" y="805" width="460" height="280" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
 <rect x="1070" y="800" width="460" height="280" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
 <rect x="1070" y="800" width="10" height="280" rx="5" fill="#0284c7" stroke="none" stroke-width="1"/>
