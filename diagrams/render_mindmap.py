@@ -70,17 +70,18 @@ GROUPS = [
         ],
     },
     {
-        "title": "AUDIO QUALITY",
-        "subtitle": "How did the speech sound to listeners?",
+        "title": "SYNTHESIS & AUDIO",
+        "subtitle": "How does generated speech sound?",
         "color": "#db2777",
         "soft": "#fdf2f8",
         "x": 1070,
         "y": 475,
         "rows": [
-            ("MOS", "Average listener rating"),
+            ("Human A/B", "Blind listener preference"),
+            ("MOS", "Rated naturalness / tone"),
             ("Intelligibility", "Words listeners recover"),
+            ("Voice match", "Speaker identity in TTS"),
             ("PESQ", "Telephone / codec quality"),
-            ("Report", "Question + listening setup"),
         ],
     },
     {
@@ -141,7 +142,7 @@ def main():
         'viewBox="0 0 1600 1250" role="img" aria-labelledby="title desc">',
         '<title id="title">Speech evaluation metric mind map</title>',
         '<desc id="desc">Six branches cover transcript accuracy, speakers, detection and speed, '
-        'translation, audio quality, and task outcomes. A footer shows an evaluation checklist.</desc>',
+        'translation, speech synthesis and audio quality, and task outcomes. A footer shows an evaluation checklist.</desc>',
         rect(0, 0, 1600, 1250, "#f7f9fd", 0),
         f'<circle cx="805" cy="610" r="445" fill="#eef3fa"/>',
         text(800, 67, "Speech evaluation, by task", 42, INK, 750, "middle"),

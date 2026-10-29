@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1250" viewBox="0 0 1600 1250" role="img" aria-labelledby="title desc">
 <title id="title">Speech evaluation metric mind map</title>
-<desc id="desc">Six branches cover transcript accuracy, speakers, detection and speed, translation, audio quality, and task outcomes. A footer shows an evaluation checklist.</desc>
+<desc id="desc">Six branches cover transcript accuracy, speakers, detection and speed, translation, speech synthesis and audio quality, and task outcomes. A footer shows an evaluation checklist.</desc>
 <rect x="0" y="0" width="1600" height="1250" rx="0" fill="#f7f9fd" stroke="none" stroke-width="1"/>
 <circle cx="805" cy="610" r="445" fill="#eef3fa"/>
 <text x="800" y="67" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="42" font-weight="750" fill="#18304d">Speech evaluation, by task</text>
@@ -96,20 +96,23 @@
 <rect x="1070" y="475" width="460" height="280" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
 <rect x="1070" y="475" width="10" height="280" rx="5" fill="#db2777" stroke="none" stroke-width="1"/>
 <rect x="1098" y="497" width="402" height="62" rx="14" fill="#fdf2f8" stroke="none" stroke-width="1"/>
-<text x="1114" y="524" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#db2777">AUDIO QUALITY</text>
-<text x="1114" y="548" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#52647b">How did the speech sound to listeners?</text>
+<text x="1114" y="524" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#db2777">SYNTHESIS &amp; AUDIO</text>
+<text x="1114" y="548" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#52647b">How does generated speech sound?</text>
 <circle cx="1115" cy="585" r="4" fill="#db2777"/>
-<text x="1131" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">MOS</text>
-<text x="1283" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Average listener rating</text>
+<text x="1131" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Human A/B</text>
+<text x="1283" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Blind listener preference</text>
 <circle cx="1115" cy="617" r="4" fill="#db2777"/>
-<text x="1131" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Intelligibility</text>
-<text x="1283" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Words listeners recover</text>
+<text x="1131" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">MOS</text>
+<text x="1283" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Rated naturalness / tone</text>
 <circle cx="1115" cy="649" r="4" fill="#db2777"/>
-<text x="1131" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">PESQ</text>
-<text x="1283" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Telephone / codec quality</text>
+<text x="1131" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Intelligibility</text>
+<text x="1283" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Words listeners recover</text>
 <circle cx="1115" cy="681" r="4" fill="#db2777"/>
-<text x="1131" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Report</text>
-<text x="1283" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Question + listening setup</text>
+<text x="1131" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Voice match</text>
+<text x="1283" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Speaker identity in TTS</text>
+<circle cx="1115" cy="713" r="4" fill="#db2777"/>
+<text x="1131" y="718" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">PESQ</text>
+<text x="1283" y="718" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Telephone / codec quality</text>
 <rect x="1070" y="805" width="460" height="280" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
 <rect x="1070" y="800" width="460" height="280" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
 <rect x="1070" y="800" width="10" height="280" rx="5" fill="#0284c7" stroke="none" stroke-width="1"/>

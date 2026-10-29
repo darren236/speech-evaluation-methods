@@ -5,10 +5,10 @@ This guide builds on the [Singapore and Southeast Asian automatic speech recogni
 
 ## Map
 
-Six branches group metrics by task. The footer gives a short evaluation checklist.
+Six branches group metrics by task, including text-to-speech (TTS). The footer gives a short evaluation checklist.
 The included scorer computes word and character error rates.
 
-![Speech evaluation map with transcript, speaker, detection and speed, translation, audio quality, and task outcome branches](assets/evaluation-map.svg)
+![Speech evaluation map with transcript, speaker, detection and speed, translation, speech generation and audio quality, and task outcome branches](assets/evaluation-map.svg)
 
 ## Choose metrics
 
@@ -27,7 +27,8 @@ A *reference* is the expected transcript or label; a *prediction* is the system 
 | Live voice system | **Task success:** share of user goals completed. | Final WER, early cut-offs, and time to first and final response. |
 | Offline processing | WER or CER + **real-time factor (RTF):** processing time ÷ audio duration. | Compare accuracy and speed by recording type. |
 | Speech translation | **BLEU:** word overlap; **chrF:** character overlap. | Human meaning check; **COMET:** model-based quality. |
-| Generated or cleaned-up speech | **Mean opinion score (MOS):** average listener rating. | Intelligibility (understanding); **PESQ:** telephone audio quality. |
+| Text-to-speech (TTS) | Blind listener preference or **mean opinion score (MOS):** average listener rating of a named quality. | Pronunciation, intelligibility (words understood), voice match, and time to first audio. |
+| Cleaned-up speech | Listener rating of quality and intelligibility. | **PESQ:** telephone/codec quality when its test conditions fit. |
 
 ### Four questions
 
@@ -103,17 +104,57 @@ Use human review for names, numbers, negation, and other critical meaning.
 Use [SacreBLEU](https://github.com/mjpost/sacreBLEU) to record BLEU/chrF settings.
 COMET scores need a model version and cannot be calculated from this text example alone.
 
-## Audio quality
+## Text-to-speech (TTS)
 
-Listening quality and intelligibility answer different questions.
+Start with **human listening** for naturalness and overall preference.
+Automatic scores help find specific faults; they cannot establish that a voice sounds right.
+Use the same prompts and playback conditions for each system.
 
 | Metric | Use | Small example |
 | --- | --- | --- |
-| **MOS** · mean opinion score | Listener rating of a stated property, such as naturalness. | Ratings 4, 4, 3, 5, 4 on a 1–5 scale give **4.0/5**. |
-| Intelligibility | Whether listeners can recover speech. | 90 of 100 target words repeated correctly = **90%**. |
-| **PESQ** | Objective telephone/codec quality score. | Compare clean and degraded recordings with a conforming tool. Audio is needed for a score. |
+| Blind A/B preference | Which of two hidden systems sounds better for the same text? | 18 of 30 listeners choose A for a prompt set: **60% prefer A**. |
+| **MOS** · mean opinion score | Rate one named quality, such as naturalness, on a fixed scale. | Naturalness ratings 4, 4, 3, 5, 4 on a 1–5 scale give **4.0/5**. |
+| Pronunciation accuracy | Check names, numbers, abbreviations, and words that change with context. | 8 of 10 marked terms are read acceptably: **80% correct**. |
+| Intelligibility | Can listeners recover the intended words? | 90 of 100 target words repeated correctly = **90%**. |
+| Speech-to-text WER/CER | Transcribe generated audio automatically; compare with the input text for word or character errors. | Prompt `turn left`, recognizer hears `turn`: **50% WER**. Check the recognizer's own mistakes. |
+| Voice match | For voice cloning, does speech sound like the authorized reference speaker? | Reviewers judge 16 of 20 clips as matching: **80%** under that rubric. |
+| Time to first audio | For live TTS, how soon can playback begin? | Request at 0.0 s; first playable audio at 0.4 s: **0.4 s**. |
 
-For MOS, report the question, listeners, playback setup, and uncertainty.
+### What listeners check
+
+- **Words:** Are names, local terms, numbers, and abbreviations pronounced correctly? Is any text skipped or invented?
+- **Prosody:** Do stress, pitch, rhythm, and pauses fit the sentence? Does a question sound like a question?
+- **Tone:** Does the emotion and level of warmth fit the message, without sounding flat or exaggerated?
+- **Voice:** Is the accent appropriate and stable? For cloning, does identity stay close to the reference?
+- **Sound:** Are there clicks, distortion, unnatural breaths, abrupt joins, or uneven loudness?
+- **Long passages:** Does the voice stay consistent and easy to listen to over time?
+
+For example, read “Turn left at Bedok” aloud. A listener checks both *Bedok* and emphasis on *left*;
+a transcript-based score may miss awkward stress or an unsuitable tone.
+Blind model names, randomize clip order, use listeners familiar with the language or accent,
+and report the exact question, scale, prompt set, listener count, playback setup, and uncertainty.
+
+### Leaderboards
+
+| Board | What it tells you | Check before using a rank |
+| --- | --- | --- |
+| [TTS Arena](https://huggingface.co/spaces/TTS-AGI/TTS-Arena-V2) | Blind human preference for how speech sounds. | Check language coverage, vote counts, and rating uncertainty. |
+| [Artificial Analysis Speech Arena](https://artificialanalysis.ai/text-to-speech/leaderboard) | Blind pairwise preference, with provider voices or matched cloned voices; also offers pronunciation checks. | Choose the right voice, language, and category view; inspect vote counts and uncertainty. |
+| [Hugging Face Open TTS](https://huggingface.co/spaces/hf-audio/open_tts_leaderboard) | Open-model diagnostics: speech-to-text error, voice similarity, and generation speed. | These scores do not directly measure naturalness, tone, or listener preference. |
+
+Use rankings to shortlist systems, then listen to **your own prompts** with the target audience.
+Keep preference, pronunciation, voice match, and speed as separate results; one rank cannot cover all four.
+
+## Audio enhancement
+
+Cleaned-up speech needs a different listening question from TTS.
+Rate listening quality and whether words remain understandable.
+
+| Metric | Use | Small example |
+| --- | --- | --- |
+| **PESQ** | Objective telephone/codec quality under its specified conditions. | Compare clean and degraded recordings with a conforming tool. Audio is needed for a score. |
+
+PESQ is not a general TTS naturalness score.
 
 ## Task outcomes
 
