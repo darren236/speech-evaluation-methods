@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="760" viewBox="0 0 1500 760" role="img" aria-labelledby="title desc">
+<title id="title">Three routes for evaluating text-to-speech</title>
+<desc id="desc">Generate matching clips from the same text and target voice, then assess them with human listening, model-based checks, and service measurements. Report each result separately.</desc>
+<rect x="0" y="0" width="1500" height="760" rx="0" fill="#f7f9fd" stroke="none" stroke-width="1"/>
+<text x="50" y="60" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="750" fill="#18304d">TTS quality needs more than one score</text>
+<text x="50" y="92" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#52647b">Use the same prompts and voice setup for every system.</text>
+<rect x="451" y="130" width="598" height="80" rx="20" fill="#18304d" stroke="none" stroke-width="1"/>
+<text x="750" y="179" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="750" fill="#ffffff">TEXT + TARGET VOICE → GENERATED CLIPS</text>
+<path d="M 750 210 V 252 H 255 M 750 252 H 1245" fill="none" stroke="#9aabc0" stroke-width="4" stroke-linecap="round"/>
+<path d="M 255 252 V 294 M 248 286 L 255 294 L 262 286" fill="none" stroke="#db2777" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="50" y="304" width="410" height="312" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="50" y="299" width="410" height="312" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="50" y="299" width="10" height="312" rx="4" fill="#db2777" stroke="none" stroke-width="1"/>
+<text x="81" y="351" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="750" fill="#db2777">HUMAN LISTENING</text>
+<path d="M 80 373 H 430" stroke="#e2e9f2" stroke-width="2"/>
+<circle cx="127" cy="454" r="42" fill="#db2777" opacity=".12"/>
+<circle cx="115" cy="445" r="9" fill="none" stroke="#db2777" stroke-width="4"/>
+<circle cx="142" cy="445" r="9" fill="none" stroke="#db2777" stroke-width="4"/>
+<path d="M 98 473 Q 115 452 131 473 M 126 473 Q 142 452 158 473" fill="none" stroke="#db2777" stroke-width="4" stroke-linecap="round"/>
+<text x="187" y="414" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#18304d">A/B preference · MOS</text>
+<text x="187" y="448" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#52647b">Tone · pronunciation</text>
+<text x="187" y="482" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#52647b">Intelligibility · voice match</text>
+<rect x="77" y="538" width="356" height="50" rx="13" fill="#db2777" stroke="none" stroke-width="1"/>
+<text x="255" y="571" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Needs listeners</text>
+<path d="M 255 616 V 652 M 248 644 L 255 652 L 262 644" fill="none" stroke="#db2777" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 750 252 V 294 M 743 286 L 750 294 L 757 286" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="545" y="304" width="410" height="312" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="545" y="299" width="410" height="312" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="545" y="299" width="10" height="312" rx="4" fill="#7c3aed" stroke="none" stroke-width="1"/>
+<text x="576" y="351" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="750" fill="#7c3aed">MODEL CHECKS</text>
+<path d="M 575 373 H 925" stroke="#e2e9f2" stroke-width="2"/>
+<circle cx="622" cy="454" r="42" fill="#7c3aed" opacity=".12"/>
+<rect x="599" y="430" width="46" height="48" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+<path d="M 608 444 H 636 M 608 454 H 630 M 608 464 H 634" stroke="#7c3aed" stroke-width="4" stroke-linecap="round"/>
+<text x="682" y="414" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#18304d">ASR WER / CER</text>
+<text x="682" y="448" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#52647b">Speaker similarity</text>
+<text x="682" y="482" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#52647b">Review model mistakes</text>
+<rect x="572" y="538" width="356" height="50" rx="13" fill="#7c3aed" stroke="none" stroke-width="1"/>
+<text x="750" y="571" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Needs audio + references</text>
+<path d="M 750 616 V 652 M 743 644 L 750 652 L 757 644" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1245 252 V 294 M 1238 286 L 1245 294 L 1252 286" fill="none" stroke="#c26a16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1040" y="304" width="410" height="312" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="1040" y="299" width="410" height="312" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="1040" y="299" width="10" height="312" rx="4" fill="#c26a16" stroke="none" stroke-width="1"/>
+<text x="1071" y="351" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="750" fill="#c26a16">SERVICE MEASURES</text>
+<path d="M 1070 373 H 1420" stroke="#e2e9f2" stroke-width="2"/>
+<circle cx="1117" cy="454" r="42" fill="#c26a16" opacity=".12"/>
+<circle cx="1117" cy="454" r="26" fill="#ffffff" stroke="#c26a16" stroke-width="4"/>
+<path d="M 1117 438 V 454 L 1130 462" fill="none" stroke="#c26a16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1177" y="414" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#18304d">Time to first audio</text>
+<text x="1177" y="448" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#52647b">Generation failures</text>
+<text x="1177" y="482" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#52647b">Compare under the same load</text>
+<rect x="1067" y="538" width="356" height="50" rx="13" fill="#c26a16" stroke="none" stroke-width="1"/>
+<text x="1245" y="571" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">Needs timed requests</text>
+<path d="M 1245 616 V 652 M 1238 644 L 1245 652 L 1252 644" fill="none" stroke="#c26a16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="50" y="667" width="1400" height="66" rx="20" fill="#eaf0f8" stroke="none" stroke-width="1"/>
+<text x="750" y="708" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#18304d">Choose for the target audience; report each result separately.</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="740" viewBox="0 0 1500 740" role="img" aria-labelledby="title desc">
+<title id="title">Four sources of speech evaluation evidence</title>
+<desc id="desc">One test set branches to human judgments, calculated scores, model-assisted checks, and service or outcome measures. Each route has different requirements.</desc>
+<rect x="0" y="0" width="1500" height="740" rx="0" fill="#f7f9fd" stroke="none" stroke-width="1"/>
+<text x="50" y="60" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="750" fill="#18304d">How a result is obtained</text>
+<text x="50" y="93" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#52647b">The same test set can support four kinds of evidence.</text>
+<rect x="550" y="127" width="400" height="69" rx="19" fill="#18304d" stroke="none" stroke-width="1"/>
+<text x="750" y="171" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="750" fill="#ffffff">SAME TEST SET</text>
+<path d="M 750 196 V 235 H 220 M 750 235 H 1315" fill="none" stroke="#9aabc0" stroke-width="4" stroke-linecap="round"/>
+<path d="M 220 235 V 274 M 213 266 L 220 274 L 227 266" fill="none" stroke="#db2777" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="50" y="281" width="340" height="345" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="50" y="276" width="340" height="345" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="50" y="276" width="10" height="345" rx="4" fill="#db2777" stroke="none" stroke-width="1"/>
+<text x="81" y="326" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="750" fill="#db2777">HUMAN</text>
+<path d="M 80 354 H 360" stroke="#e2e9f2" stroke-width="2"/>
+<text x="81" y="397" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#18304d">Listen or review</text>
+<text x="81" y="447" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#52647b">A/B · MOS · adequacy</text>
+<text x="81" y="479" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#52647b">Tone · pronunciation</text>
+<rect x="77" y="535" width="286" height="54" rx="13" fill="#db2777" stroke="none" stroke-width="1"/>
+<text x="220" y="569" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#ffffff">Listener judgments</text>
+<path d="M 585 235 V 274 M 578 266 L 585 274 L 592 266" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="415" y="281" width="340" height="345" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="415" y="276" width="340" height="345" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="415" y="276" width="10" height="345" rx="4" fill="#2563eb" stroke="none" stroke-width="1"/>
+<text x="446" y="326" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="750" fill="#2563eb">CALCULATED</text>
+<path d="M 445 354 H 725" stroke="#e2e9f2" stroke-width="2"/>
+<text x="446" y="397" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#18304d">Compare references</text>
+<text x="446" y="447" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#52647b">WER · CER · DER</text>
+<text x="446" y="479" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#52647b">BLEU · PESQ</text>
+<rect x="442" y="535" width="286" height="54" rx="13" fill="#2563eb" stroke="none" stroke-width="1"/>
+<text x="585" y="569" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#ffffff">Fixed labels or audio</text>
+<path d="M 950 235 V 274 M 943 266 L 950 274 L 957 266" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="780" y="281" width="340" height="345" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="780" y="276" width="340" height="345" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="780" y="276" width="10" height="345" rx="4" fill="#7c3aed" stroke="none" stroke-width="1"/>
+<text x="811" y="326" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="750" fill="#7c3aed">MODEL-ASSISTED</text>
+<path d="M 810 354 H 1090" stroke="#e2e9f2" stroke-width="2"/>
+<text x="811" y="397" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#18304d">Run a pinned evaluator</text>
+<text x="811" y="447" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#52647b">COMET · TTS ASR</text>
+<text x="811" y="479" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#52647b">Speaker similarity</text>
+<rect x="807" y="535" width="286" height="54" rx="13" fill="#7c3aed" stroke="none" stroke-width="1"/>
+<text x="950" y="569" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#ffffff">Inspect model errors</text>
+<path d="M 1315 235 V 274 M 1308 266 L 1315 274 L 1322 266" fill="none" stroke="#c26a16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1145" y="281" width="340" height="345" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="1145" y="276" width="340" height="345" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="1145" y="276" width="10" height="345" rx="4" fill="#c26a16" stroke="none" stroke-width="1"/>
+<text x="1176" y="326" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="21" font-weight="750" fill="#c26a16">SERVICE / OUTCOME</text>
+<path d="M 1175 354 H 1455" stroke="#e2e9f2" stroke-width="2"/>
+<text x="1176" y="397" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" fill="#18304d">Read logs + pass rules</text>
+<text x="1176" y="447" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#52647b">First audio · RTF</text>
+<text x="1176" y="479" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#52647b">Task success</text>
+<rect x="1172" y="535" width="286" height="54" rx="13" fill="#c26a16" stroke="none" stroke-width="1"/>
+<text x="1315" y="569" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#ffffff">Some need human labels</text>
+<text x="750" y="689" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#52647b">A calculated score can still depend on labels made by people.</text>
+</svg>

@@ -39,6 +39,8 @@ A *reference* is the expected transcript or label; a *prediction* is the system 
 | **Model-assisted check** | A pinned evaluation model; inspect its mistakes. | COMET; TTS speech-to-text errors and speaker similarity. |
 | **Service or outcome measure** | Timing logs or defined success labels. Some outcomes need human review. | First-audio delay, RTF, task success. |
 
+![Four paths from one test set to human judgments, calculated scores, model-assisted checks, and service or outcome measures](assets/evidence-routes.svg)
+
 ### Four questions
 
 The same speech system can need different measures for text, speakers, speed, and results.
@@ -118,6 +120,8 @@ COMET scores need a model version and cannot be calculated from this text exampl
 Use **human ratings** for how speech sounds, **calculated checks** for specific errors,
 and **service measures** for speed and reliability.
 The calculated checks need generated audio and references; some references require human labeling.
+
+![TTS evaluation flow from shared prompts and voice to human listening, model checks, and service measures](assets/tts-quality-routes.svg)
 
 ### Human listening
 
