@@ -5,9 +5,10 @@ This guide builds on the [Singapore and Southeast Asian automatic speech recogni
 
 ## Map
 
-The map groups metrics by task. The included scorer computes word and character error rates.
+Six branches group metrics by task. The footer shows the rules that make scores comparable.
+The included scorer computes word and character error rates.
 
-![Mind map grouping speech evaluation into text output, speaker and timing, user outcomes, and study design](assets/evaluation-map.svg)
+![Speech evaluation map with transcript, speaker, detection and speed, translation, audio quality, and task outcome branches](assets/evaluation-map.svg)
 
 ## Choose metrics
 
@@ -27,6 +28,12 @@ A *reference* is the expected transcript or label; a *prediction* is the system 
 | Offline processing | WER or CER + **real-time factor (RTF):** processing time ÷ audio duration. | Compare accuracy and speed by recording type. |
 | Speech translation | **BLEU:** word overlap; **chrF:** character overlap. | Human meaning check; **COMET:** model-based quality. |
 | Generated or cleaned-up speech | **Mean opinion score (MOS):** average listener rating. | Intelligibility (understanding); **PESQ:** telephone audio quality. |
+
+### Four questions
+
+The same speech system can need different measures for text, speakers, speed, and results.
+
+![Four illustrated metric lenses: text, speakers, timing, and results](assets/metric-lenses.svg)
 
 ## Transcript accuracy
 
@@ -139,6 +146,8 @@ The scorer covers **WER and CER only**. Other metrics in this guide are explaine
 If `pip` is available, `pip install -e .` also adds the `speech-eval` command.
 
 ## Evaluation checklist
+
+![Four illustrated steps from matching data through reviewing failures](assets/evaluation-flow.svg)
 
 1. Match the test set to the speech your product will hear.
 2. Record its version, references, rights, speakers, and possible training overlap.

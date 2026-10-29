@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="360" viewBox="0 0 1500 360" role="img" aria-labelledby="title desc">
+<title id="title">Four-step evaluation workflow</title>
+<desc id="desc">Match data, freeze scoring rules, score by condition, and review failures.</desc>
+<rect x="0" y="0" width="1500" height="360" rx="0" fill="#f7f9fd" stroke="none" stroke-width="1"/>
+<text x="50" y="60" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="750" fill="#18304d">From metric choice to a useful score</text>
+<rect x="50" y="105" width="340" height="205" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="50" y="105" width="340" height="9" rx="4" fill="#2563eb" stroke="none" stroke-width="1"/>
+<circle cx="114" cy="164" r="32" fill="#2563eb"/>
+<text x="114" y="174" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="28" font-weight="750" fill="#ffffff">1</text>
+<text x="82" y="235" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#18304d">Match the data</text>
+<text x="82" y="271" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#52647b">Use speech the product will hear.</text>
+<path d="M 396 207 H 407 M 402 201 L 408 207 L 402 213" fill="none" stroke="#71849d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="415" y="105" width="340" height="205" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="415" y="105" width="340" height="9" rx="4" fill="#0d9488" stroke="none" stroke-width="1"/>
+<circle cx="479" cy="164" r="32" fill="#0d9488"/>
+<text x="479" y="174" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="28" font-weight="750" fill="#ffffff">2</text>
+<text x="447" y="235" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#18304d">Freeze the rules</text>
+<text x="447" y="271" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#52647b">Fix references and token policies.</text>
+<path d="M 761 207 H 772 M 767 201 L 773 207 L 767 213" fill="none" stroke="#71849d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="780" y="105" width="340" height="205" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="780" y="105" width="340" height="9" rx="4" fill="#c26a16" stroke="none" stroke-width="1"/>
+<circle cx="844" cy="164" r="32" fill="#c26a16"/>
+<text x="844" y="174" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="28" font-weight="750" fill="#ffffff">3</text>
+<text x="812" y="235" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#18304d">Score by condition</text>
+<text x="812" y="271" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#52647b">Show counts, rates, uncertainty.</text>
+<path d="M 1126 207 H 1137 M 1132 201 L 1138 207 L 1132 213" fill="none" stroke="#71849d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1145" y="105" width="340" height="205" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="1145" y="105" width="340" height="9" rx="4" fill="#7c3aed" stroke="none" stroke-width="1"/>
+<circle cx="1209" cy="164" r="32" fill="#7c3aed"/>
+<text x="1209" y="174" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="28" font-weight="750" fill="#ffffff">4</text>
+<text x="1177" y="235" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#18304d">Review failures</text>
+<text x="1177" y="271" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#52647b">Inspect names, turns, and cut-offs.</text>
+</svg>

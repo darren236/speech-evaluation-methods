@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="460" viewBox="0 0 1500 460" role="img" aria-labelledby="title desc">
+<title id="title">Four questions for speech evaluation</title>
+<desc id="desc">Transcript, speaker, timing, and outcome metrics answer different questions.</desc>
+<rect x="0" y="0" width="1500" height="460" rx="0" fill="#f7f9fd" stroke="none" stroke-width="1"/>
+<text x="50" y="58" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="750" fill="#18304d">One system, different questions</text>
+<text x="50" y="90" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="400" fill="#52647b">Choose measures for the parts of the experience you need to judge.</text>
+<rect x="50" y="139" width="340" height="270" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="50" y="135" width="340" height="270" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="50" y="135" width="340" height="9" rx="4" fill="#2563eb" stroke="none" stroke-width="1"/>
+<circle cx="122" cy="206" r="42" fill="#2563eb" opacity=".12"/>
+<rect x="99" y="182" width="46" height="48" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+<path d="M 108 196 H 136 M 108 206 H 130 M 108 216 H 134" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
+<text x="182" y="187" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="750" fill="#2563eb">TEXT</text>
+<text x="182" y="223" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#18304d">What was said?</text>
+<path d="M 82 270 H 358" stroke="#dce5f0" stroke-width="2"/>
+<text x="82" y="310" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#2563eb">WER · CER · entity recall</text>
+<text x="82" y="344" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#52647b">Words, scripts, and critical names</text>
+<rect x="415" y="139" width="340" height="270" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="415" y="135" width="340" height="270" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="415" y="135" width="340" height="9" rx="4" fill="#0d9488" stroke="none" stroke-width="1"/>
+<circle cx="487" cy="206" r="42" fill="#0d9488" opacity=".12"/>
+<circle cx="475" cy="197" r="9" fill="none" stroke="#0d9488" stroke-width="4"/>
+<circle cx="502" cy="197" r="9" fill="none" stroke="#0d9488" stroke-width="4"/>
+<path d="M 458 225 Q 475 204 491 225 M 486 225 Q 502 204 518 225" fill="none" stroke="#0d9488" stroke-width="4" stroke-linecap="round"/>
+<text x="547" y="187" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="750" fill="#0d9488">SPEAKERS</text>
+<text x="547" y="223" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#18304d">Who said it?</text>
+<path d="M 447 270 H 723" stroke="#dce5f0" stroke-width="2"/>
+<text x="447" y="310" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#0d9488">DER · cpWER · tcpWER</text>
+<text x="447" y="344" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#52647b">Speaker turns and assigned words</text>
+<rect x="780" y="139" width="340" height="270" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="780" y="135" width="340" height="270" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="780" y="135" width="340" height="9" rx="4" fill="#c26a16" stroke="none" stroke-width="1"/>
+<circle cx="852" cy="206" r="42" fill="#c26a16" opacity=".12"/>
+<circle cx="852" cy="206" r="26" fill="#ffffff" stroke="#c26a16" stroke-width="4"/>
+<path d="M 852 190 V 206 L 865 214" fill="none" stroke="#c26a16" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="912" y="187" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="750" fill="#c26a16">TIMING</text>
+<text x="912" y="223" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#18304d">When was it ready?</text>
+<path d="M 812 270 H 1088" stroke="#dce5f0" stroke-width="2"/>
+<text x="812" y="310" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#c26a16">Endpoint · latency · RTF</text>
+<text x="812" y="344" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#52647b">Live delay and offline speed</text>
+<rect x="1145" y="139" width="340" height="270" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="1145" y="135" width="340" height="270" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="1145" y="135" width="340" height="9" rx="4" fill="#7c3aed" stroke="none" stroke-width="1"/>
+<circle cx="1217" cy="206" r="42" fill="#7c3aed" opacity=".12"/>
+<circle cx="1217" cy="206" r="26" fill="#ffffff" stroke="#7c3aed" stroke-width="4"/>
+<path d="M 1203 206 L 1214 217 L 1234 194" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1277" y="187" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="750" fill="#7c3aed">RESULT</text>
+<text x="1277" y="223" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700" fill="#18304d">Did it work?</text>
+<path d="M 1177 270 H 1453" stroke="#dce5f0" stroke-width="2"/>
+<text x="1177" y="310" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#7c3aed">Task success · error review</text>
+<text x="1177" y="344" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="400" fill="#52647b">User goals and failure patterns</text>
+</svg>

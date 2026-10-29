@@ -1,75 +1,153 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" role="img" aria-labelledby="title desc">
-<title id="title">Speech evaluation methods mind map</title>
-<desc id="desc">Four branches categorize text output, speaker and timing, user outcomes, and evaluation study design.</desc>
-<rect width="1280" height="780" fill="#ffffff"/>
-<path d="M 510 380 C 440 380, 545 190, 490 190" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
-<circle cx="490" cy="190" r="5" fill="#2563eb"/>
-<path d="M 275 190 C 255 190, 270 75, 250 75" fill="none" stroke="#2563eb" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="250" cy="75" r="4.5" fill="#2563eb"/>
-<text x="235" y="81" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">WER: word accuracy</text>
-<path d="M 275 190 C 255 190, 270 135, 250 135" fill="none" stroke="#2563eb" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="250" cy="135" r="4.5" fill="#2563eb"/>
-<text x="235" y="141" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">CER: character accuracy</text>
-<path d="M 275 190 C 255 190, 270 195, 250 195" fill="none" stroke="#2563eb" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="250" cy="195" r="4.5" fill="#2563eb"/>
-<text x="235" y="201" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Entity accuracy: names</text>
-<path d="M 275 190 C 255 190, 270 255, 250 255" fill="none" stroke="#2563eb" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="250" cy="255" r="4.5" fill="#2563eb"/>
-<text x="235" y="261" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Edit counts: diagnosis</text>
-<text x="275" y="173" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#2563eb">TEXT OUTPUT</text>
-<path d="M 275 203 H 490" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/>
-<path d="M 510 440 C 440 440, 545 600, 490 600" fill="none" stroke="#078466" stroke-width="5" stroke-linecap="round"/>
-<circle cx="490" cy="600" r="5" fill="#078466"/>
-<path d="M 275 600 C 255 600, 270 480, 250 480" fill="none" stroke="#078466" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="250" cy="480" r="4.5" fill="#078466"/>
-<text x="235" y="486" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">DER: speaker time</text>
-<path d="M 275 600 C 255 600, 270 540, 250 540" fill="none" stroke="#078466" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="250" cy="540" r="4.5" fill="#078466"/>
-<text x="235" y="546" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">cpWER: speaker words</text>
-<path d="M 275 600 C 255 600, 270 600, 250 600" fill="none" stroke="#078466" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="250" cy="600" r="4.5" fill="#078466"/>
-<text x="235" y="606" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">VAD: misses/false alarms</text>
-<path d="M 275 600 C 255 600, 270 660, 250 660" fill="none" stroke="#078466" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="250" cy="660" r="4.5" fill="#078466"/>
-<text x="235" y="666" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Latency: streaming</text>
-<text x="275" y="583" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#078466">SPEAKER AND TIME</text>
-<path d="M 275 613 H 490" stroke="#078466" stroke-width="4" stroke-linecap="round"/>
-<path d="M 770 380 C 840 380, 735 190, 790 190" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round"/>
-<circle cx="790" cy="190" r="5" fill="#b45309"/>
-<path d="M 1005 190 C 1025 190, 1010 75, 1030 75" fill="none" stroke="#b45309" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="1030" cy="75" r="4.5" fill="#b45309"/>
-<text x="1045" y="81" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Task completion</text>
-<path d="M 1005 190 C 1025 190, 1010 135, 1030 135" fill="none" stroke="#b45309" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="1030" cy="135" r="4.5" fill="#b45309"/>
-<text x="1045" y="141" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">BLEU / chrF / COMET</text>
-<path d="M 1005 190 C 1025 190, 1010 195, 1030 195" fill="none" stroke="#b45309" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="1030" cy="195" r="4.5" fill="#b45309"/>
-<text x="1045" y="201" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">MOS listening tests</text>
-<path d="M 1005 190 C 1025 190, 1010 255, 1030 255" fill="none" stroke="#b45309" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="1030" cy="255" r="4.5" fill="#b45309"/>
-<text x="1045" y="261" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Intelligibility</text>
-<text x="790" y="173" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#b45309">USER OUTCOMES</text>
-<path d="M 790 203 H 1005" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
-<path d="M 770 440 C 840 440, 735 600, 790 600" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linecap="round"/>
-<circle cx="790" cy="600" r="5" fill="#7c3aed"/>
-<path d="M 1005 600 C 1025 600, 1010 470, 1030 470" fill="none" stroke="#7c3aed" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="1030" cy="470" r="4.5" fill="#7c3aed"/>
-<text x="1045" y="476" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Dataset fit</text>
-<path d="M 1005 600 C 1025 600, 1010 525, 1030 525" fill="none" stroke="#7c3aed" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="1030" cy="525" r="4.5" fill="#7c3aed"/>
-<text x="1045" y="531" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Reference policy</text>
-<path d="M 1005 600 C 1025 600, 1010 580, 1030 580" fill="none" stroke="#7c3aed" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="1030" cy="580" r="4.5" fill="#7c3aed"/>
-<text x="1045" y="586" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Source overlap</text>
-<path d="M 1005 600 C 1025 600, 1010 635, 1030 635" fill="none" stroke="#7c3aed" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="1030" cy="635" r="4.5" fill="#7c3aed"/>
-<text x="1045" y="641" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Paired uncertainty</text>
-<path d="M 1005 600 C 1025 600, 1010 690, 1030 690" fill="none" stroke="#7c3aed" stroke-opacity=".72" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="1030" cy="690" r="4.5" fill="#7c3aed"/>
-<text x="1045" y="696" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="19" font-weight="500" fill="#263447">Per-condition scorecard</text>
-<text x="790" y="583" text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="21" font-weight="700" fill="#7c3aed">STUDY DESIGN</text>
-<path d="M 790 613 H 1005" stroke="#7c3aed" stroke-width="4" stroke-linecap="round"/>
-<rect x="510" y="350" width="260" height="120" rx="26" fill="#17324f"/>
-<text x="640" y="395" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="26" font-weight="700" fill="#ffffff">SPEECH</text>
-<text x="640" y="429" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="26" font-weight="700" fill="#ffffff">EVALUATION</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1250" viewBox="0 0 1600 1250" role="img" aria-labelledby="title desc">
+<title id="title">Speech evaluation metric mind map</title>
+<desc id="desc">Six branches cover transcript accuracy, speakers, detection and speed, translation, audio quality, and task outcomes. A footer lists evaluation rules.</desc>
+<rect x="0" y="0" width="1600" height="1250" rx="0" fill="#f7f9fd" stroke="none" stroke-width="1"/>
+<circle cx="805" cy="610" r="445" fill="#eef3fa"/>
+<text x="800" y="67" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="42" font-weight="750" fill="#18304d">Speech evaluation, by task</text>
+<text x="800" y="104" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="400" fill="#52647b">Start with one primary measure. Add metrics for failures that matter.</text>
+<path d="M 600 530 C 565 530, 565 290, 530 290" fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round"/>
+<circle cx="530" cy="290" r="6" fill="#2563eb"/>
+<path d="M 600 600 C 565 600, 565 615, 530 615" fill="none" stroke="#0d9488" stroke-width="5" stroke-linecap="round"/>
+<circle cx="530" cy="615" r="6" fill="#0d9488"/>
+<path d="M 600 680 C 565 680, 565 940, 530 940" fill="none" stroke="#c26a16" stroke-width="5" stroke-linecap="round"/>
+<circle cx="530" cy="940" r="6" fill="#c26a16"/>
+<path d="M 1000 530 C 1035 530, 1035 290, 1070 290" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linecap="round"/>
+<circle cx="1070" cy="290" r="6" fill="#7c3aed"/>
+<path d="M 1000 600 C 1035 600, 1035 615, 1070 615" fill="none" stroke="#db2777" stroke-width="5" stroke-linecap="round"/>
+<circle cx="1070" cy="615" r="6" fill="#db2777"/>
+<path d="M 1000 680 C 1035 680, 1035 940, 1070 940" fill="none" stroke="#0284c7" stroke-width="5" stroke-linecap="round"/>
+<circle cx="1070" cy="940" r="6" fill="#0284c7"/>
+<rect x="70" y="155" width="460" height="280" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="70" y="150" width="460" height="280" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="70" y="150" width="10" height="280" rx="5" fill="#2563eb" stroke="none" stroke-width="1"/>
+<rect x="98" y="172" width="402" height="62" rx="14" fill="#eff6ff" stroke="none" stroke-width="1"/>
+<text x="114" y="199" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#2563eb">TRANSCRIPT ACCURACY</text>
+<text x="114" y="223" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#52647b">What words or characters were produced?</text>
+<circle cx="115" cy="260" r="4" fill="#2563eb"/>
+<text x="131" y="265" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">WER</text>
+<text x="283" y="265" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Standard for English words</text>
+<circle cx="115" cy="292" r="4" fill="#2563eb"/>
+<text x="131" y="297" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">CER</text>
+<text x="283" y="297" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Common for Mandarin text</text>
+<circle cx="115" cy="324" r="4" fill="#2563eb"/>
+<text x="131" y="329" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Entity recall</text>
+<text x="283" y="329" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Names, places, amounts</text>
+<circle cx="115" cy="356" r="4" fill="#2563eb"/>
+<text x="131" y="361" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Mixed-unit</text>
+<text x="283" y="361" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Code-switched scripts</text>
+<circle cx="115" cy="388" r="4" fill="#2563eb"/>
+<text x="131" y="393" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">MER / WIL</text>
+<text x="283" y="393" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Extra alignment views</text>
+<rect x="70" y="480" width="460" height="280" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="70" y="475" width="460" height="280" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="70" y="475" width="10" height="280" rx="5" fill="#0d9488" stroke="none" stroke-width="1"/>
+<rect x="98" y="497" width="402" height="62" rx="14" fill="#ecfdf9" stroke="none" stroke-width="1"/>
+<text x="114" y="524" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#0d9488">SPEAKERS</text>
+<text x="114" y="548" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#52647b">Who spoke, and which words were theirs?</text>
+<circle cx="115" cy="585" r="4" fill="#0d9488"/>
+<text x="131" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">DER</text>
+<text x="283" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Speaker-time errors</text>
+<circle cx="115" cy="617" r="4" fill="#0d9488"/>
+<text x="131" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">cpWER</text>
+<text x="283" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Words + speaker labels</text>
+<circle cx="115" cy="649" r="4" fill="#0d9488"/>
+<text x="131" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">tcpWER</text>
+<text x="283" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Words + speaker + time</text>
+<circle cx="115" cy="681" r="4" fill="#0d9488"/>
+<text x="131" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Report</text>
+<text x="283" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Miss / false / confusion</text>
+<rect x="70" y="805" width="460" height="280" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="70" y="800" width="460" height="280" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="70" y="800" width="10" height="280" rx="5" fill="#c26a16" stroke="none" stroke-width="1"/>
+<rect x="98" y="822" width="402" height="62" rx="14" fill="#fff7ed" stroke="none" stroke-width="1"/>
+<text x="114" y="849" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#c26a16">DETECTION &amp; SPEED</text>
+<text x="114" y="873" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#52647b">Was speech found and processed in time?</text>
+<circle cx="115" cy="910" r="4" fill="#c26a16"/>
+<text x="131" y="915" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Detection</text>
+<text x="283" y="915" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Miss + false-alarm rates</text>
+<circle cx="115" cy="942" r="4" fill="#c26a16"/>
+<text x="131" y="947" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Endpoint</text>
+<text x="283" y="947" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Delay + early cut-offs</text>
+<circle cx="115" cy="974" r="4" fill="#c26a16"/>
+<text x="131" y="979" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Streaming</text>
+<text x="283" y="979" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">First / stable / final text</text>
+<circle cx="115" cy="1006" r="4" fill="#c26a16"/>
+<text x="131" y="1011" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">RTF</text>
+<text x="283" y="1011" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Offline processing speed</text>
+<rect x="1070" y="155" width="460" height="280" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="1070" y="150" width="460" height="280" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="1070" y="150" width="10" height="280" rx="5" fill="#7c3aed" stroke="none" stroke-width="1"/>
+<rect x="1098" y="172" width="402" height="62" rx="14" fill="#f5f3ff" stroke="none" stroke-width="1"/>
+<text x="1114" y="199" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#7c3aed">TRANSLATION</text>
+<text x="1114" y="223" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#52647b">Was the meaning carried across?</text>
+<circle cx="1115" cy="260" r="4" fill="#7c3aed"/>
+<text x="1131" y="265" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">BLEU</text>
+<text x="1283" y="265" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Matching word sequences</text>
+<circle cx="1115" cy="292" r="4" fill="#7c3aed"/>
+<text x="1131" y="297" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">chrF</text>
+<text x="1283" y="297" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Matching character spans</text>
+<circle cx="1115" cy="324" r="4" fill="#7c3aed"/>
+<text x="1131" y="329" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">COMET</text>
+<text x="1283" y="329" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Model-based quality</text>
+<circle cx="1115" cy="356" r="4" fill="#7c3aed"/>
+<text x="1131" y="361" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Human review</text>
+<text x="1283" y="361" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Meaning + critical details</text>
+<rect x="1070" y="480" width="460" height="280" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="1070" y="475" width="460" height="280" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="1070" y="475" width="10" height="280" rx="5" fill="#db2777" stroke="none" stroke-width="1"/>
+<rect x="1098" y="497" width="402" height="62" rx="14" fill="#fdf2f8" stroke="none" stroke-width="1"/>
+<text x="1114" y="524" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#db2777">AUDIO QUALITY</text>
+<text x="1114" y="548" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#52647b">How did the speech sound to listeners?</text>
+<circle cx="1115" cy="585" r="4" fill="#db2777"/>
+<text x="1131" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">MOS</text>
+<text x="1283" y="590" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Average listener rating</text>
+<circle cx="1115" cy="617" r="4" fill="#db2777"/>
+<text x="1131" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Intelligibility</text>
+<text x="1283" y="622" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Words listeners recover</text>
+<circle cx="1115" cy="649" r="4" fill="#db2777"/>
+<text x="1131" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">PESQ</text>
+<text x="1283" y="654" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Telephone / codec quality</text>
+<circle cx="1115" cy="681" r="4" fill="#db2777"/>
+<text x="1131" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Report</text>
+<text x="1283" y="686" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Question + listening setup</text>
+<rect x="1070" y="805" width="460" height="280" rx="24" fill="#dce5f0" stroke="none" stroke-width="1"/>
+<rect x="1070" y="800" width="460" height="280" rx="24" fill="#ffffff" stroke="#e2e9f2" stroke-width="2"/>
+<rect x="1070" y="800" width="10" height="280" rx="5" fill="#0284c7" stroke="none" stroke-width="1"/>
+<rect x="1098" y="822" width="402" height="62" rx="14" fill="#f0f9ff" stroke="none" stroke-width="1"/>
+<text x="1114" y="849" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700" fill="#0284c7">TASK OUTCOMES</text>
+<text x="1114" y="873" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="400" fill="#52647b">Did the user reach the intended goal?</text>
+<circle cx="1115" cy="910" r="4" fill="#0284c7"/>
+<text x="1131" y="915" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Task success</text>
+<text x="1283" y="915" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Correct completion rate</text>
+<circle cx="1115" cy="942" r="4" fill="#0284c7"/>
+<text x="1131" y="947" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Repair</text>
+<text x="1283" y="947" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Repeat or correction needed?</text>
+<circle cx="1115" cy="974" r="4" fill="#0284c7"/>
+<text x="1131" y="979" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Breakdown</text>
+<text x="1283" y="979" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">Failures by scenario</text>
+<circle cx="1115" cy="1006" r="4" fill="#0284c7"/>
+<text x="1131" y="1011" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" fill="#18304d">Pair with</text>
+<text x="1283" y="1011" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="400" fill="#52647b">WER + latency to explain</text>
+<rect x="600" y="455" width="400" height="295" rx="32" fill="#d2dce9" stroke="none" stroke-width="1"/>
+<rect x="600" y="449" width="400" height="295" rx="32" fill="#18304d" stroke="none" stroke-width="1"/>
+<text x="800" y="511" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="35" font-weight="750" fill="#ffffff">SPEECH</text>
+<text x="800" y="553" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="35" font-weight="750" fill="#ffffff">EVALUATION</text>
+<path d="M 670 583 H 930" stroke="#86a9d2" stroke-width="2"/>
+<text x="800" y="619" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="600" fill="#dceaf8">Choose the task first</text>
+<text x="800" y="658" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#ffffff">Primary metric + failure check</text>
+<text x="800" y="694" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="400" fill="#ffffff">Same data · same scoring rules</text>
+<rect x="70" y="1120" width="1460" height="100" rx="22" fill="#eaf0f8" stroke="none" stroke-width="1"/>
+<text x="105" y="1159" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="750" fill="#18304d">STUDY RULES</text>
+<circle cx="300" cy="1170" r="25" fill="#18304d"/>
+<text x="300" y="1177" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">01</text>
+<text x="338" y="1177" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#18304d">Match the data</text>
+<circle cx="600" cy="1170" r="25" fill="#18304d"/>
+<text x="600" y="1177" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">02</text>
+<text x="638" y="1177" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#18304d">Freeze references + rules</text>
+<circle cx="900" cy="1170" r="25" fill="#18304d"/>
+<text x="900" y="1177" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">03</text>
+<text x="938" y="1177" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#18304d">Compare paired systems</text>
+<circle cx="1200" cy="1170" r="25" fill="#18304d"/>
+<text x="1200" y="1177" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">04</text>
+<text x="1238" y="1177" text-anchor="start" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="600" fill="#18304d">Report by condition</text>
 </svg>

@@ -1,9 +1,12 @@
-# Mind map source
+# Diagram sources
 
-`render_mindmap.py` generates the self-contained SVG used in the repository README.
+The README uses three self-contained SVGs. They need no external fonts or image files.
 
 ```bash
 python3 diagrams/render_mindmap.py
+python3 diagrams/render_illustrations.py
 ```
 
-Edit the branch labels and leaves in `GROUPS`, then regenerate `assets/evaluation-map.svg`.
+Edit `GROUPS` in `render_mindmap.py` to update the six metric branches.
+The second script renders the metric-lens and evaluation-flow illustrations.
+Regenerate the SVGs after changing either source.
