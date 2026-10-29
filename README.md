@@ -2,6 +2,12 @@
 
 A practical guide to choosing speech metrics, with a small, auditable ASR scorer. It builds on the companion [Singapore and Southeast Asian ASR dataset survey](https://github.com/darren236/singapore-asr-datasets). Start with the **output you need to judge**: transcript text, speaker turns, timing, translation, generated speech, or the success of a voice task. Then choose a metric and a matching test set.
 
+## Evaluation map
+
+Use this mind map to locate a measure by the output or decision you need to evaluate. The included scorer implements **WER and CER**; the other branches are method guides.
+
+![Mind map grouping speech evaluation into text output, speaker and timing, user outcomes, and study design](assets/evaluation-map.svg)
+
 ## Which metric should I use?
 
 “Default” below means a familiar starting measure **within that task**, not a popularity ranking across all speech research. Lower is better for error rates and latency; higher is better for recall, quality judgments, and task success.
@@ -19,12 +25,6 @@ A practical guide to choosing speech metrics, with a small, auditable ASR scorer
 | Generated or enhanced speech | Controlled listening test, often **MOS** | Established subjective method | Intelligibility and latency | Listener setup and question wording affect results. |
 
 See the [ASR metric guide](docs/metrics.md) for definitions and worked examples, [other speech tasks](docs/other-tasks.md) for speaker, timing, translation, and audio-quality measures, and the [evaluation protocol](docs/protocol.md) for choosing data and reporting a comparison. For a voice product, report **task success alongside the technical measure** that explains failures.
-
-## Evaluation map
-
-Use this mind map to locate a measure by the output or decision you need to evaluate. The included scorer implements **WER and CER**; the other branches are method guides.
-
-![Mind map grouping speech evaluation into text output, speaker and timing, user outcomes, and study design](assets/evaluation-map.svg)
 
 ## One example: why the metric policy matters
 
